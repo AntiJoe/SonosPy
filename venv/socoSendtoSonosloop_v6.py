@@ -22,8 +22,7 @@ def update_Local_Sonos(delay):
     Sonos['album'] = track['album']
 
 server_list = [("156.57.253.45", UDP_PORT)]
-# HOME = ("156.57.20.108", 7777)
-# bones = "192.168.5.13"
+
 hostname = socket.gethostname()
 
 # depending on where run...  sets server list and Local Sonos ip
@@ -38,7 +37,7 @@ else:
 print("Sonos track transfer...  sending on port: ", UDP_PORT)
 print("version: ", vnum)
 print("version message: ", vmsg)
-print()
+print(server_list)
 
 # create empty dictionaries
 meta = dict()
